@@ -1,19 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-       body {
-            position: absolute;
-            display: flex;
-            justify-content: center; /* Menengahkan secara horizontal */
-            align-items: center; /* Menengahkan secara vertikal */
-        }
-    </style>
-    <title>CV Fahmi Putra Alamsyah</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CV Fahmi Putra Alamsyah</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      min-height: 100vh;
+      background: #ffffff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 2.5rem 1.5rem;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    .cv-header {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    .cv-header h1 {
+      font-size: 22px;
+      font-weight: 500;
+      color: #111;
+      letter-spacing: 0.5px;
+      margin-bottom: 4px;
+    }
+
+    .cv-header p {
+      font-size: 13px;
+      color: #888;
+    }
+
+    .cv-divider {
+      width: 40px;
+      height: 2px;
+      background: #e0e0e0;
+      margin: 1rem auto 2rem;
+      border-radius: 2px;
+    }
+
+    .cv-frame {
+      background: #fff;
+      border: 0.5px solid #e5e5e5;
+      border-radius: 12px;
+      overflow: hidden;
+      width: 100%;
+      max-width: 640px;
+    }
+
+    .cv-frame img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .cv-footer {
+      margin-top: 1.5rem;
+      font-size: 12px;
+      color: #bbb;
+      text-align: center;
+    }
+  </style>
 </head>
 <body>
-    <img id="cvku" src="assets/img/cv/cv saya.jpg" alt="">
+
+  <div class="cv-header">
+    <h1>Curriculum Vitae</h1>
+    <p>Fahmi Putra Alamsyah</p>
+  </div>
+
+  <div class="cv-divider"></div>
+
+  <div class="cv-frame">
+    <img src="assets/img/cv/cv saya.jpg" alt="CV Fahmi Putra Alamsyah">
+  </div>
+
+  <div class="cv-footer">© Fahmi Putra Alamsyah</div>
+
 </body>
 </html>
