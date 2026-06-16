@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ronda Game House - Rental PS Terbaik di Pekanbaru</title>
+    <style>
+        :root {
+            --bg-color: #0b0c10;
+            --text-color: #ffffff;
+            --cyan: #00f0ff;
+            --magenta: #ff007f;
+            --dark-blue: #1f2833;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Hero Section */
+        header {
+            text-align: center;
+            padding: 60px 20px;
+            background: linear-gradient(rgba(11, 12, 16, 0.85), rgba(11, 12, 16, 0.95)), url('https://via.placeholder.com/1200x600/000000/00f0ff?text=Ronda+Game+House+Gaming+Vibe') no-repeat center center/cover;
+            border-bottom: 3px solid var(--cyan);
+        }
+
+        .logo-title {
+            font-size: 3.5rem;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-shadow: 0 0 10px var(--cyan), 0 0 20px var(--cyan);
+            margin-bottom: 5px;
+        }
+
+        .logo-sub {
+            font-size: 4rem;
+            font-weight: 900;
+            text-transform: uppercase;
+            color: var(--cyan);
+            text-shadow: 0 0 15px var(--cyan);
+            margin-bottom: 20px;
+        }
+
+        .tagline {
+            background-color: var(--magenta);
+            color: white;
+            display: inline-block;
+            padding: 8px 20px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            transform: skewX(-10deg);
+            margin-bottom: 15px;
+            box-shadow: 0 0 10px var(--magenta);
+        }
+
+        .sub-tagline {
+            font-size: 1.1rem;
+            color: #ccc;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Container */
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin: 50px 0 30px;
+            position: relative;
+            color: #fff;
+        }
+
+        .section-title:first-of-type {
+            margin-top: 10px;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 150px;
+            height: 3px;
+            background: linear-gradient(90deg, var(--cyan), var(--magenta));
+            margin: 10px auto 0;
+        }
+
+        /* Services Section */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin-bottom: 40px;
+        }
+
+        .service-card {
+            background: var(--dark-blue);
+            border: 2px solid var(--cyan);
+            border-radius: 10px;
+            padding: 25px;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+            box-shadow: 0 0 10px rgba(0, 240, 255, 0.2);
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 0 20px var(--cyan);
+        }
+
+        .service-card.switch {
+            border-color: var(--magenta);
+            box-shadow: 0 0 10px rgba(255, 0, 127, 0.2);
+        }
+
+        .service-card.switch:hover {
+            box-shadow: 0 0 20px var(--magenta);
+        }
+
+        .service-card h3 {
+            font-size: 1.2rem;
+            text-transform: uppercase;
+            color: #aaa;
+            margin-bottom: 5px;
+        }
+
+        .service-card h2 {
+            font-size: 2.5rem;
+            text-transform: uppercase;
+            margin-bottom: 15px;
+            color: var(--cyan);
+        }
+
+        .service-card.switch h2 {
+            color: var(--magenta);
+        }
+
+        /* Gallery Section (4 Slot Gambar) */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 8px;
+            border: 2px solid #333;
+            aspect-ratio: 4 / 3;
+            background-color: #222;
+            transition: border-color 0.3s;
+        }
+
+        .gallery-item:hover {
+            border-color: var(--cyan);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+
+        .gallery-caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(transparent, rgba(0, 0, 0, 0.9));
+            padding: 10px;
+            text-align: center;
+            font-size: 0.9rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Interior & Branch Grid (2 Slot Gambar Besar) */
+        .two-column-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+            gap: 25px;
+            margin-bottom: 40px;
+        }
+
+        .large-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 12px;
+            border: 2px solid #333;
+            aspect-ratio: 16 / 9; /* Default rasio normal lebar */
+            background-color: #222;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+            transition: border-color 0.3s, box-shadow 0.3s;
+        }
+
+        /* Kelas Baru: Membuat Gambar Cabang Bangau Sakti Lebih Tinggi */
+        .large-item.tall-item {
+            aspect-ratio: 14 / 15; /* Mengubah aspek rasio menjadi lebih kotak dan tinggi */
+        }
+
+        .large-item.cyan-glow:hover {
+            border-color: var(--cyan);
+            box-shadow: 0 0 25px rgba(0, 240, 255, 0.4);
+        }
+
+        .large-item.magenta-glow:hover {
+            border-color: var(--magenta);
+            box-shadow: 0 0 25px rgba(255, 0, 127, 0.4);
+        }
+
+        .large-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s cubic-bezier(0.15, 1, 0.3, 1);
+        }
+
+        .large-item:hover img {
+            transform: scale(1.05);
+        }
+
+        .large-caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to top, rgba(0,0,0,0.95) 20%, rgba(0,0,0,0.7) 60%, transparent);
+            padding: 20px;
+            text-align: left;
+        }
+
+        .large-caption h4 {
+            font-size: 1.2rem;
+            text-transform: uppercase;
+            margin-bottom: 5px;
+        }
+
+        .cyan-glow .large-caption h4 {
+            color: var(--cyan);
+            text-shadow: 0 0 5px rgba(0, 240, 255, 0.5);
+        }
+
+        .magenta-glow .large-caption h4 {
+            color: var(--magenta);
+            text-shadow: 0 0 5px rgba(255, 0, 127, 0.5);
+        }
+
+        .large-caption p {
+            font-size: 0.9rem;
+            color: #ddd;
+        }
+
+        /* Branches Section */
+        .branches-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 15px;
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .branch-card {
+            background: #111;
+            border-top: 4px solid var(--magenta);
+            padding: 20px 15px;
+            border-radius: 5px;
+        }
+
+        .branch-icon {
+            font-size: 1.5rem;
+            color: var(--magenta);
+            margin-bottom: 10px;
+        }
+
+        .branch-name {
+            font-size: 1rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            color: var(--cyan);
+            margin-bottom: 10px;
+        }
+
+        .branch-desc {
+            font-size: 0.85rem;
+            color: #bbb;
+        }
+
+        /* Call to Action Footer */
+        .cta-footer {
+            background: linear-gradient(45deg, #800040, #004080);
+            text-align: center;
+            padding: 40px 20px;
+            border-radius: 10px;
+            border: 2px solid #fff;
+            box-shadow: 0 0 15px rgba(255,255,255,0.2);
+        }
+
+        .cta-footer h2 {
+            font-size: 2rem;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.6);
+        }
+
+        .cta-footer p {
+            font-size: 1.1rem;
+            font-style: italic;
+            color: #e0e0e0;
+        }
+
+        /* Responsif */
+        @media (max-width: 768px) {
+            .logo-title { font-size: 2.5rem; }
+            .logo-sub { font-size: 2.8rem; }
+            .tagline { font-size: 1rem; }
+            .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+            .two-column-grid { grid-template-columns: 1fr; }
+        }
+        @media (max-width: 480px) {
+            .gallery-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo-title">Ronda</div>
+        <div class="logo-sub">Game House</div>
+        <div class="tagline">Rental PS Terbaik di Kota Pekanbaru!</div>
+        <div class="sub-tagline">Tempat seru buat ngabuburit, nongkrong, dan mabar bareng teman!</div>
+    </header>
+
+    <div class="container">
+
+        <h2 class="section-title">Ronda Game House</h2>
+        <div class="two-column-grid">
+            <div class="large-item tall-item cyan-glow">
+                <img src="assets/img/ronda/depan-ronda2.jpg" alt="Suasana Eksterior / Interior Cabang Bangau Sakti">
+                <div class="large-caption">
+                    <h4>Ronda Game House Cabang Bangau Sakti</h4>
+                </div>
+            </div>
+            <div class="large-item tall-item cyan-glow">
+                <img src="assets/img/ronda/depan-ronda.jpg" alt="Fasilitas Khusus Cabang Bangau Sakti">
+                <div class="large-caption">
+                    <h4>Ronda Game House Cabang Bangau Sakti</h4>
+                </div>
+            </div>
+        </div>
+        
+        <h2 class="section-title">Layanan Kami</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <h3>Rental</h3>
+                <h2>PS 4</h2>
+                <p>Konsol handal dengan pilihan game super lengkap.</p>
+            </div>
+            <div class="service-card">
+                <h3>Rental</h3>
+                <h2>PS 5</h2>
+                <p>Rasakan performa gaming next-gen grafis ultra memukau.</p>
+            </div>
+            <div class="service-card switch">
+                <h3>Rental</h3>
+                <h2>Nintendo Switch</h2>
+                <p>Seru-seruan bareng game party interaktif ter-update.</p>
+            </div>
+        </div>
+
+        <!-- <h2 class="section-title">Karyawan Ronda Game House</h2>
+        <div class="gallery-grid">
+            <div class="gallery-item">
+                <img src="assets/img/ronda/ronda1.jpg" alt="Tampak Depan Ronda Game House">
+                <div class="gallery-caption">Bagian Dalam</div>
+            </div>
+            <div class="gallery-item">
+                <img src="alamat_gambar_2.jpg" alt="Fasilitas Room">
+                <div class="gallery-caption">Bagian Dalam</div>
+            </div> -->
+            <!-- <div class="gallery-item">
+                <img src="alamat_gambar_3.jpg" alt="Ruang Tunggu">
+                <div class="gallery-caption">Ruang Tunggu</div>
+            </div>
+            <div class="gallery-item">
+                <img src="alamat_gambar_4.jpg" alt="Event & Tournament">
+                <div class="gallery-caption">Event & Tournament</div>
+            </div> -->
+        <!-- </div> -->
+
+        <h2 class="section-title">Suasana di Dalam Rental</h2>
+        <div class="two-column-grid">
+            <div class="large-item magenta-glow">
+                <img src="assets/img/ronda/ronda.jpeg" alt="Kondisi Player Sedang Mabar Seru">
+                <div class="large-caption">
+                    <h4>Vibe Gaming Maksimal</h4>
+                    <p>Ruangan ber-AC, kursi nyaman, didukung pencahayaan LED neon yang bikin mabar makin betah.</p>
+                </div>
+            </div>
+            <div class="large-item magenta-glow">
+                <img src="assets/img/ronda/ronda2.jpeg" alt="Setup TV dan Konsol Clean">
+                <div class="large-caption">
+                    <h4>Setup Monitor & Audio Jernih</h4>
+                    <p>Layar TV berukuran besar dengan resolusi tinggi demi kepuasan visual game favorit Anda.</p>
+                </div>
+            </div>
+        </div>
+
+        <h2 class="section-title">Banyak Cabang, Dekat Denganmu!</h2>
+        <div class="branches-grid">
+            <div class="branch-card">
+                <div class="branch-icon">📍</div>
+                <div class="branch-name">Jalan Meranti</div>
+                <div class="branch-desc">Lokasi Strategis & Nyaman</div>
+            </div>
+            <div class="branch-card">
+                <div class="branch-icon">📍</div>
+                <div class="branch-name">Jalan Bangau Sakti</div>
+                <div class="branch-desc">Tempat Seru Buat Mabar</div>
+            </div>
+            <div class="branch-card">
+                <div class="branch-icon">📍</div>
+                <div class="branch-name">Jalan Mulyorejo</div>
+                <div class="branch-desc">Fasilitas Lengkap, Game Updated</div>
+            </div>
+            <div class="branch-card">
+                <div class="branch-icon">📍</div>
+                <div class="branch-name">Jalan Kaharudin</div>
+                <div class="branch-desc">Harga Bersahabat, Puas Mainnya</div>
+            </div>
+            <div class="branch-card">
+                <div class="branch-icon">📍</div>
+                <div class="branch-name">Jalan Yosudarso</div>
+                <div class="branch-desc">Tempat Favorit Para Gamer</div>
+            </div>
+        </div>
+
+        <div class="cta-footer">
+            <h2>Ayo Mabar di Ronda Game House!</h2>
+            <p>Game Seru, Teman Baru, Kenangan Baru!</p>
+        </div>
+
+    </div>
+
+</body>
+</html>
